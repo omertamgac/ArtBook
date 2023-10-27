@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragmentFirst">
+    <fragment
+        android:id="@+id/fragmentFirst"
+        android:name="com.example.artbook.FragmentFirst"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_fragmentFirst_to_fragmentSecond"
+            app:destination="@id/fragmentSecond" />
+        <action
+            android:id="@+id/action_fragmentFirst_to_recycler_Detail"
+            app:destination="@id/recycler_Detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSecond"
+        android:name="com.example.artbook.FragmentSecond"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_fragmentSecond_to_fragmentFirst"
+            app:destination="@id/fragmentFirst" />
+    </fragment>
+    <fragment
+        android:id="@+id/recycler_Detail"
+        android:name="com.example.artbook.recycler_Detail"
+        android:label="recycler_Detail" />
+</navigation>
